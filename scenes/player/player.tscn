@@ -3,15 +3,17 @@
 [ext_resource type="Script" uid="uid://dbiddvaa807y1" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://2o4a8qh8kjei" path="res://resources/sprites/player/TestPLayer32.png" id="2_dovo2"]
 
-[node name="PlayerNode" type="Node2D" unique_id=611502192]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1454469414]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=946695477]
 script = ExtResource("1_dovo2")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=1819578632]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1651177656]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=669469874]
 scale = Vector2(0.9999998, 0.9999998)
 polygon = PackedVector2Array(16.320477, 14.836798, 0, -16.320477, -16.320477, 14.836798, 0, 5.934719)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=997969018]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1457554516]
 texture_filter = 1
 texture = ExtResource("2_dovo2")

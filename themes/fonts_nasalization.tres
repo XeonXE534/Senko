@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://ceyfvc8bwl7tr"]
+
+[ext_resource type="FontFile" uid="uid://vgn7n2u2eomo" path="res://resources/fonts/nasalization/Nasalization Rg.otf" id="1_4osh0"]
+
+[resource]
+default_font = ExtResource("1_4osh0")

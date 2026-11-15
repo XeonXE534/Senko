@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c4iui2e1ei7xv"]
+
+[ext_resource type="Script" uid="uid://brom3qg0p6krx" path="res://scripts/huds/debug_hud.gd" id="1_xdksa"]
+[ext_resource type="Theme" uid="uid://ceyfvc8bwl7tr" path="res://themes/fonts_nasalization.tres" id="2_a1uob"]
+
+[node name="DebugHud" type="CanvasLayer" unique_id=1755502290]
+script = ExtResource("1_xdksa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1764422018]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SpeedLabel" type="Label" parent="VBoxContainer" unique_id=573258890]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_a1uob")
+text = "NULL!"
+
+[node name="DirectionLabel" type="Label" parent="VBoxContainer" unique_id=1119235671]
+layout_mode = 2
+theme = ExtResource("2_a1uob")
+text = "NULL!"
