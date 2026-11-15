@@ -3,14 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://jws6me6ppfnr" path="res://scenes/player/player.tscn" id="1_4kwad"]
 [ext_resource type="PackedScene" uid="uid://c4iui2e1ei7xv" path="res://scenes/huds/debug_hud.tscn" id="3_6436y"]
 [ext_resource type="PackedScene" uid="uid://8hfbwogns7y5" path="res://scenes/test_scenes/testpart1.tscn" id="3_igh58"]
+[ext_resource type="PackedScene" uid="uid://bhm0kxdsq8212" path="res://scenes/effects/motionblur.tscn" id="4_6436y"]
+[ext_resource type="Texture2D" uid="uid://celyaevn6wcij" path="res://resources/sprites/tests/cat.png" id="5_3vk7x"]
 
 [node name="TestStage" type="Node2D" unique_id=356844649]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1541650930]
+position = Vector2(-2476.9998, 0)
+scale = Vector2(5.4251366, 5.4251366)
+texture = ExtResource("5_3vk7x")
+
 [node name="PlayerNode" parent="." unique_id=611502192 instance=ExtResource("1_4kwad")]
-position = Vector2(261, 287)
+position = Vector2(261, 357)
 
 [node name="Node2D" parent="." unique_id=1272227745 instance=ExtResource("3_igh58")]
 position = Vector2(40, 51)
 rotation = 3.1416502
 
 [node name="DebugHud" parent="." unique_id=1755502290 instance=ExtResource("3_6436y")]
+
+[node name="motionblur" parent="." unique_id=1202981115 instance=ExtResource("4_6436y")]

@@ -25,6 +25,11 @@ Globals="*uid://bffnic2nulsdx"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+theme/default_font_generate_mipmaps=true
+
 [input]
 
 W={
@@ -52,6 +57,7 @@ D={
 
 common/physics_ticks_per_second=120
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

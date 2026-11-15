@@ -1,19 +1,31 @@
 [gd_scene format=3 uid="uid://jws6me6ppfnr"]
 
 [ext_resource type="Script" uid="uid://dbiddvaa807y1" path="res://scripts/player/player.gd" id="1_dovo2"]
-[ext_resource type="Texture2D" uid="uid://2o4a8qh8kjei" path="res://resources/sprites/player/TestPLayer32.png" id="2_dovo2"]
+[ext_resource type="Texture2D" uid="uid://ddhe2yqieay4k" path="res://resources/sprites/player/player.png" id="2_dovo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(640.00024, 570.00024)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=946695477]
+texture_filter = 2
+scale = Vector2(0.05, 0.05)
 script = ExtResource("1_dovo2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1651177656]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=669469874]
-scale = Vector2(0.9999998, 0.9999998)
-polygon = PackedVector2Array(16.320477, 14.836798, 0, -16.320477, -16.320477, 14.836798, 0, 5.934719)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1457554516]
-texture_filter = 1
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1354117646]
 texture = ExtResource("2_dovo2")
+offset = Vector2(30, -42)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1676501110]
+scale = Vector2(0.9999998, 0.9999998)
+polygon = PackedVector2Array(0, -319.99997, 39.999996, -299.99997, 59.999992, -279.99997, 119.999985, -159.99998, 319.99997, 199.99998, 279.99997, 259.99997, -279.99997, 259.99997, -339.99997, 199.99998, -119.999985, -179.99998, -59.999992, -279.99997, -39.999996, -299.99997)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1577004207]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1672794249]
+position = Vector2(-7.6293877e-06, 394.99997)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_dovo2")

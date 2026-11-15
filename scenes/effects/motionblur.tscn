@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bhm0kxdsq8212"]
+
+[ext_resource type="Shader" uid="uid://nhwscm444lmb" path="res://resources/shaders/motionblur.gdshader" id="1_u421f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cx86p"]
+shader = ExtResource("1_u421f")
+shader_parameter/linear_velocity = Vector2(0, 0)
+shader_parameter/iterations = 8
+
+[node name="motionblur" type="CanvasLayer" unique_id=1202981115]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1426083936]
+material = SubResource("ShaderMaterial_cx86p")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

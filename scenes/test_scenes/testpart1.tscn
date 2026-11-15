@@ -2,17 +2,27 @@
 
 [ext_resource type="Script" uid="uid://bj5th6g8nyike" path="res://scripts/tests/testpart_1.gd" id="1_xlhpn"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlhpn"]
+size = Vector2(310, 904)
+
 [node name="Node2D" type="Node2D" unique_id=89251107]
 
 [node name="Line2D" type="Line2D" parent="." unique_id=100776091]
-points = PackedVector2Array(-262, -302, 372, -284, 606, -243, 733, -177, 818, -113, 891, -26, 938, 154, 1110, 172, 1252, 5, 1264, -213, 1225, -330, 1159, -404, 1289, -685, 1639, -717, 1906, -487, 2033, -85, 2059, 242, 1940, 509, 1635, 655, 1271, 753, 1013, 694, 749, 632, 758, 563)
+position = Vector2(51, 21)
+points = PackedVector2Array(-486, -679, 6194, -396, 6195, 273)
 script = ExtResource("1_xlhpn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Line2D" unique_id=1023466028]
 
 [node name="Line2D2" type="Line2D" parent="." unique_id=923900618]
-position = Vector2(76, 0)
-points = PackedVector2Array(-350, -177, -42, -127, 70, -104, 182, -89, 339, -37, 428, 32, 509, 102, 563, 179, 652, 273, 808, 327, 926, 364, 1074, 356, 1207, 288, 1274, 182, 1341, 19, 1359, -136, 1340, -262, 1303, -349, 1269, -429, 1296, -547, 1408, -571, 1538, -556, 1617, -474, 1655, -370, 1677, -259, 1673, -154, 1663, -43, 1674, 63, 1674, 148, 1674, 223, 1651, 315, 1614, 392, 1552, 457, 1466, 502, 1377, 558, 1270, 564, 1058, 610, 975, 595, 855, 564, 758, 553, 692, 529, 685, 561)
+position = Vector2(89, 154)
+points = PackedVector2Array(-572, -234, 6167, 123)
 script = ExtResource("1_xlhpn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Line2D2" unique_id=551586728]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=915970197]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2088158889]
+position = Vector2(-582, -418)
+shape = SubResource("RectangleShape2D_xlhpn")
