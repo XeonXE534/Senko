@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bj5th6g8nyike" path="res://scripts/tests/testpart_1.gd" id="1_xlhpn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlhpn"]
-size = Vector2(310, 904)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_um3sh"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xlhpn"]
 
 [node name="Node2D" type="Node2D" unique_id=89251107]
 
@@ -13,6 +14,12 @@ points = PackedVector2Array(-486, -679, 6194, -396, 6195, 273)
 script = ExtResource("1_xlhpn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Line2D" unique_id=1023466028]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/StaticBody2D" unique_id=317894108]
+shape = SubResource("SegmentShape2D_um3sh")
+disabled = true
 
 [node name="Line2D2" type="Line2D" parent="." unique_id=923900618]
 position = Vector2(89, 154)
@@ -20,9 +27,10 @@ points = PackedVector2Array(-572, -234, 6167, 123)
 script = ExtResource("1_xlhpn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Line2D2" unique_id=551586728]
+collision_layer = 2
+collision_mask = 3
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=915970197]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2088158889]
-position = Vector2(-582, -418)
-shape = SubResource("RectangleShape2D_xlhpn")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D2/StaticBody2D" unique_id=1001408393]
+position = Vector2(263, 900)
+shape = SubResource("SegmentShape2D_xlhpn")
+disabled = true

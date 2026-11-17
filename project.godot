@@ -11,10 +11,13 @@ config_version=5
 [application]
 
 config/name="Senko"
+config/description="A game about going really fast in fibre optic cables"
 config/version="0.1"
 run/main_scene="uid://d05iac0bjjijy"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/stretch_mode=0
+boot_splash/image="uid://bb7a1ylx2brg6"
+config/icon="uid://bb7a1ylx2brg6"
 
 [autoload]
 

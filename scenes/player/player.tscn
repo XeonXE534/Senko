@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://ddhe2yqieay4k" path="res://resources/sprites/player/player.png" id="2_dovo2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
-size = Vector2(640.00024, 570.00024)
+size = Vector2(640.00024, 420.00015)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=946695477]
 texture_filter = 2
 scale = Vector2(0.05, 0.05)
+collision_mask = 3
 script = ExtResource("1_dovo2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1651177656]
@@ -16,6 +17,7 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1354117646]
+self_modulate = Color(1.1071743, 1.1071743, 1.1071743, 1)
 texture = ExtResource("2_dovo2")
 offset = Vector2(30, -42)
 
@@ -24,8 +26,13 @@ scale = Vector2(0.9999998, 0.9999998)
 polygon = PackedVector2Array(0, -319.99997, 39.999996, -299.99997, 59.999992, -279.99997, 119.999985, -159.99998, 319.99997, 199.99998, 279.99997, 259.99997, -279.99997, 259.99997, -339.99997, 199.99998, -119.999985, -179.99998, -59.999992, -279.99997, -39.999996, -299.99997)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1577004207]
+collision_layer = 4
+collision_mask = 2
+priority = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1672794249]
-position = Vector2(-7.6293877e-06, 394.99997)
-scale = Vector2(0.9999994, 0.9999994)
+position = Vector2(-7.62938e-06, 410)
+scale = Vector2(0.99999934, 0.99999934)
 shape = SubResource("RectangleShape2D_dovo2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_thrusterInRange"]

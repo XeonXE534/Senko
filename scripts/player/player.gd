@@ -20,7 +20,6 @@ func _handleCamera(delta: float) -> void:
 	var target_zoom := Vector2(2, 2).lerp(Vector2(1, 1), speed_factor)
 	_camera.zoom = _camera.zoom.lerp(target_zoom, 12.0 * delta)
 
-
 func _handleMovement(delta: float) -> void:
 	var throttle := Input.get_axis("S", "W")
 	var direction := Input.get_axis("A", "D")
@@ -39,10 +38,10 @@ func _handleMovement(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, Globals.Player["ReverseAcceleration"] * delta)
 
 	else:
-		velocity = velocity.move_toward(Vector2.ZERO, Globals.Player["Drag"] * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, Globals.Player["Drag"] * delta)	
 
-@onready var _was_colliding := false
-@onready var _wall_target := Vector2.ZERO
+var _was_colliding := false
+var _wall_target := Vector2.ZERO
 
 func _handleWallCollisions(delta: float) -> void:
 	var _is_colliding := get_slide_collision_count() > 0
@@ -60,3 +59,6 @@ func get_speed() -> float:
 
 func get_direction() -> float:
 	return rotation
+
+func _thrusterInRange(body: Node2D) -> void:
+	velocity += velocity.normalized() * Globals.Player["BaseWallBooster"]
