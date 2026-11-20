@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dshe5crtee8wj"]
+
+[ext_resource type="Texture2D" uid="uid://dfy61rplyxyhb" path="res://resources/sprites/front_cover/v2/senko_banner_v2.png" id="1_agejt"]
+[ext_resource type="Script" uid="uid://c3but8gjp36g" path="res://scripts/menues/main.gd" id="1_ocojf"]
+[ext_resource type="Theme" uid="uid://dw26yce42a1p8" path="res://themes/flat.tres" id="2_agejt"]
+
+[node name="MainMenu" type="Control" unique_id=1498951424]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ocojf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=981633653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2083394017]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=2144737566]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_agejt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="startButton" type="Button" parent="VBoxContainer" unique_id=533443320]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_agejt")
+keep_pressed_outside = true
+text = "START"
+flat = true
+
+[node name="settingsButton" type="Button" parent="VBoxContainer" unique_id=1227146984]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_agejt")
+keep_pressed_outside = true
+text = "SETTINGS"
+flat = true
+
+[node name="aboutButton" type="Button" parent="VBoxContainer" unique_id=1641859074]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_agejt")
+keep_pressed_outside = true
+text = "ABOUT"
+flat = true
+
+[connection signal="button_up" from="VBoxContainer/startButton" to="." method="_startButtonUp"]
+[connection signal="button_up" from="VBoxContainer/settingsButton" to="." method="_settingsButtonUp"]
+[connection signal="button_up" from="VBoxContainer/aboutButton" to="." method="_aboutButtonUp"]

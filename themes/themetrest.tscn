@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ce4y0oedxjb3b"]
+
+[ext_resource type="Theme" uid="uid://ddcpd4e36vdu" path="res://themes/new_theme.tres" id="1_hrkw4"]
+
+[node name="Control" type="Control" unique_id=2126288651]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1225432227]
+layout_mode = 0
+offset_right = 8.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1104959860]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1284835405]
+layout_mode = 2
+text = "tstttest"
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=426327776]
+layout_mode = 2
+theme = ExtResource("1_hrkw4")
+text = "o"
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=780931158]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=185772932]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=1800357100]
+layout_mode = 2
+text = "tstttest"
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1210308553]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1318624309]
+layout_mode = 2

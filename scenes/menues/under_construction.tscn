@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://erm00rutm1c7"]
+
+[ext_resource type="Theme" uid="uid://dw26yce42a1p8" path="res://themes/flat.tres" id="1_23462"]
+[ext_resource type="Script" uid="uid://c3fpq2rvsiccd" path="res://scripts/menues/under_construction.gd" id="1_nn5r0"]
+
+[node name="UnderConstruction" type="Control" unique_id=180185358]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nn5r0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1415603661]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1437654941]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_23462")
+text = "Sorry this page is under construction!"
+horizontal_alignment = 1
+vertical_alignment = 1

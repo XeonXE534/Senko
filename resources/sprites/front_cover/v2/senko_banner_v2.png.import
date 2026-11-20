@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddhe2yqieay4k"
-path="res://.godot/imported/player.png-bebb91e5c714faf81a7082ad25f1bd3c.ctex"
+uid="uid://dfy61rplyxyhb"
+path="res://.godot/imported/senko_banner_v2.png-94b6e1c8b6463ee1ed13690935204426.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/sprites/player/player.png"
-dest_files=["res://.godot/imported/player.png-bebb91e5c714faf81a7082ad25f1bd3c.ctex"]
+source_file="res://resources/sprites/front_cover/v2/senko_banner_v2.png"
+dest_files=["res://.godot/imported/senko_banner_v2.png-94b6e1c8b6463ee1ed13690935204426.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

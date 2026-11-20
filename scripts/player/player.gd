@@ -21,8 +21,8 @@ func _handleCamera(delta: float) -> void:
 	_camera.zoom = _camera.zoom.lerp(target_zoom, 12.0 * delta)
 
 func _handleMovement(delta: float) -> void:
-	var throttle := Input.get_axis("S", "W")
-	var direction := Input.get_axis("A", "D")
+	var throttle := Input.get_axis("south", "north")
+	var direction := Input.get_axis("west", "east")
 
 	rotation += direction * Globals.Player["RotationSpeed"] * delta
 	if throttle > 0:

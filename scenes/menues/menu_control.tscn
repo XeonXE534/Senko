@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://eh08px5o2573"]
+
+[ext_resource type="PackedScene" uid="uid://dshe5crtee8wj" path="res://scenes/menues/main_menu.tscn" id="1_qvjc4"]
+[ext_resource type="PackedScene" uid="uid://erm00rutm1c7" path="res://scenes/menues/under_construction.tscn" id="2_346gw"]
+
+[node name="MenuControl" type="Control" unique_id=1954396281]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" parent="." unique_id=1498951424 instance=ExtResource("1_qvjc4")]
+layout_mode = 1
+
+[node name="UnderConstruction" parent="." unique_id=180185358 instance=ExtResource("2_346gw")]
+layout_mode = 1

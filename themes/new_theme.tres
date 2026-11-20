@@ -1,0 +1,37 @@
+[gd_resource type="Theme" format=3 uid="uid://ddcpd4e36vdu"]
+
+[ext_resource type="FontFile" uid="uid://vgn7n2u2eomo" path="res://resources/fonts/nasalization/Nasalization Rg.otf" id="1_s1hyc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uw25j"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7096491, 0.22522792, 0.028370574, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1hyc"]
+bg_color = Color(0.69860125, 0.22108579, 0.027131882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_765p2"]
+bg_color = Color(0.9999997, 0.3549249, 0.12375758, 1)
+
+[resource]
+default_font = ExtResource("1_s1hyc")
+default_font_size = 23
+Button/styles/focus = SubResource("StyleBoxFlat_uw25j")
+Button/styles/hover = SubResource("StyleBoxFlat_s1hyc")
+Button/styles/normal = SubResource("StyleBoxFlat_765p2")
