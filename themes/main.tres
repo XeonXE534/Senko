@@ -63,6 +63,7 @@ corner_detail = 5
 
 [resource]
 default_font = ExtResource("1_0avsd")
+default_font_size = 9
 Button/colors/font_hover_color = Color(0, 0.66470563, 0.8117718, 1)
 Button/constants/h_separation = 30
 Button/constants/outline_size = 0

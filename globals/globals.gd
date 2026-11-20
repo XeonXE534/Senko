@@ -4,8 +4,8 @@ var Player = {
 	"BaseWallBooster": 100, 
 	"Acceleration": 300.0,
 	"Drag": 570.0,
-	"ReverseAcceleration": 900.0,  #How fast the acceleration is when moving in the opposite direction
-	"RotationSpeed": 3.0,  # How fast the player rotates
+	"ReverseAcceleration": 1000.0,  #How fast the acceleration is when moving in the opposite direction
+	"RotationSpeed": 4.0,  # How fast the player rotates
 	"WallResistance" : 0.8, 
 	"Friction" : 300.0,
 }

@@ -1,36 +1,15 @@
 [gd_scene format=3 uid="uid://8hfbwogns7y5"]
 
-[ext_resource type="Script" uid="uid://bj5th6g8nyike" path="res://scripts/tests/testpart_1.gd" id="1_xlhpn"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_um3sh"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_xlhpn"]
+[ext_resource type="Script" uid="uid://cv3cov8ikjeh3" path="res://scripts/tracks/track_builder.gd" id="2_um3sh"]
 
 [node name="Node2D" type="Node2D" unique_id=89251107]
 
-[node name="Line2D" type="Line2D" parent="." unique_id=100776091]
-position = Vector2(51, 21)
-points = PackedVector2Array(-486, -679, 6194, -396, 6195, 273)
-script = ExtResource("1_xlhpn")
+[node name="OuterLine" type="Line2D" parent="." unique_id=1259461685]
+points = PackedVector2Array(5, 0, 515, 0, 554.01807, 3.8429565, 591.5367, 15.224106, 626.1141, 33.706085, 656.4214, 58.578644, 681.29395, 88.88595, 699.7759, 123.46332, 711.15704, 160.98193, 715, 200.00002, 711.15704, 239.01807, 699.7759, 276.53668, 681.29395, 311.11404, 656.4214, 341.42136, 626.114, 366.29395, 591.5367, 384.77588, 554.01807, 396.15704, 515, 400, 476.5465, 407.64893, 440.3241, 422.6527, 407.7248, 444.4349, 380.00137, 472.15836, 358.21924, 504.75766, 343.21545, 540.9801, 335.5666, 579.4336, 335.5666, 618.64044, 343.2155, 657.09393, 358.2193, 693.31635, 380.00146, 725.91565, 407.72495, 753.63904, 440.32428, 775.4212, 476.54666, 790.425, 515.0002, 798.07385, 554.20703, 798.07385, 1077, 799)
+script = ExtResource("2_um3sh")
+turn_right = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Line2D" unique_id=1023466028]
-collision_layer = 2
-collision_mask = 3
+[node name="InnerLine" type="Line2D" parent="OuterLine" unique_id=1806329970]
+points = PackedVector2Array(5.0000067, -150, 522.3691, -150.00002, 583.4232, -143.98666, 649.2169, -124.02835, 709.8528, -91.61785, 763.0006, -48.000572, 806.6179, 5.14727, 839.0283, 65.78313, 858.98663, 131.57675, 865.72577, 200.00003, 858.9867, 268.42328, 839.0283, 334.2169, 806.6179, 394.85272, 763.0006, 448.0006, 709.85266, 491.61792, 649.2169, 524.0283, 583.4233, 543.98663, 537.03625, 548.5554, 520.2999, 551.8845, 511.37573, 555.581, 503.3443, 560.94745, 496.514, 567.7777, 491.14755, 575.8092, 487.45105, 584.7334, 485.5666, 594.2073, 485.5666, 603.86664, 487.45108, 613.3405, 491.1476, 622.2648, 496.514, 630.29614, 503.34427, 637.12634, 511.3759, 642.4929, 520.3, 646.1894, 529.77386, 648.07385, 554.3399, 648.07385, 1077.2657, 649.00024)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/StaticBody2D" unique_id=317894108]
-shape = SubResource("SegmentShape2D_um3sh")
-disabled = true
-
-[node name="Line2D2" type="Line2D" parent="." unique_id=923900618]
-position = Vector2(89, 154)
-points = PackedVector2Array(-572, -234, 6167, 123)
-script = ExtResource("1_xlhpn")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Line2D2" unique_id=551586728]
-collision_layer = 2
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D2/StaticBody2D" unique_id=1001408393]
-position = Vector2(263, 900)
-shape = SubResource("SegmentShape2D_xlhpn")
-disabled = true
+[node name="StaticBody2D" type="StaticBody2D" parent="OuterLine" unique_id=895056555]
