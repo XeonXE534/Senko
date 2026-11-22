@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	print("load")
+	print_debug("Main Menu Ready")
 
 func _startButtonUp() -> void:
 	MenuTransition.change_scene("res://scenes/test_scenes/test_stage.tscn")

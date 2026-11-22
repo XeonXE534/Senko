@@ -2,38 +2,76 @@
 
 [ext_resource type="Script" uid="uid://dbiddvaa807y1" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://b5pucpjawu004" path="res://resources/sprites/player/packet.png" id="2_dovo2"]
+[ext_resource type="Texture2D" uid="uid://cpkeucbc6vnsy" path="res://resources/sprites/player/packet_boosting.png" id="2_gmlin"]
+[ext_resource type="PackedScene" uid="uid://c4iui2e1ei7xv" path="res://scenes/huds/debug_hud.tscn" id="4_lvxji"]
+[ext_resource type="PackedScene" uid="uid://biyow1lwtr8g8" path="res://scenes/huds/main_hud.tscn" id="5_p47bc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
-size = Vector2(640.00024, 420.00015)
+[sub_resource type="SpriteFrames" id="SpriteFrames_cx86p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gmlin")
+}],
+"loop": 1,
+"name": &"boosting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dovo2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=946695477]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cx86p"]
+radius = 60.000008
+height = 600.00006
+
+[node name="Packet" type="CharacterBody2D" unique_id=946695477]
 texture_filter = 2
 scale = Vector2(0.05, 0.05)
 collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+safe_margin = 1.0
 script = ExtResource("1_dovo2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1651177656]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1354117646]
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=2118982184]
 self_modulate = Color(1.1071743, 1.1071743, 1.1071743, 1)
-texture = ExtResource("2_dovo2")
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_cx86p")
+animation = &"boosting"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1676501110]
-visible = false
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1415292767]
+position = Vector2(320, 260)
+target_position = Vector2(45, 100)
+
+[node name="RayCastCentre" type="RayCast2D" parent="." unique_id=363511952]
+position = Vector2(0, 300)
+target_position = Vector2(0, 100)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1606640663]
+position = Vector2(-339.99997, 259.99997)
 scale = Vector2(0.9999998, 0.9999998)
-polygon = PackedVector2Array(0, -319.99997, 39.999996, -299.99997, 59.999992, -279.99997, 119.999985, -159.99998, 319.99997, 199.99998, 279.99997, 259.99997, -279.99997, 259.99997, -339.99997, 199.99998, -119.999985, -179.99998, -59.999992, -279.99997, -39.999996, -299.99997)
+target_position = Vector2(-45, 100)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1577004207]
-visible = false
-collision_layer = 4
-collision_mask = 2
-priority = 24
+[node name="Hitbox0" type="CollisionShape2D" parent="." unique_id=1990933630]
+position = Vector2(3.9790388e-13, 219.99995)
+rotation = 1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_cx86p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1672794249]
-position = Vector2(-7.62938e-06, 410)
-scale = Vector2(0.99999934, 0.99999934)
-shape = SubResource("RectangleShape2D_dovo2")
+[node name="Hitbox1" type="CollisionShape2D" parent="." unique_id=1616254308]
+position = Vector2(0, 20)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_cx86p")
 
-[connection signal="body_entered" from="Area2D" to="." method="_thrusterInRange"]
+[node name="DebugHud" parent="." unique_id=1755502290 instance=ExtResource("4_lvxji")]
+
+[node name="MainHUD" parent="." unique_id=225996949 instance=ExtResource("5_p47bc")]

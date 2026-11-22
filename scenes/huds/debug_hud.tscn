@@ -7,17 +7,28 @@
 script = ExtResource("1_xdksa")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1764422018]
-texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
+texture_filter = 2
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -100.5
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="SpeedLabel" type="Label" parent="VBoxContainer" unique_id=573258890]
-texture_filter = 1
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1306977982]
 layout_mode = 2
 theme = ExtResource("2_a1uob")
-text = "NULL!"
+text = "SENKO v0.2.1a DEBUG"
+fit_content = true
 
 [node name="DirectionLabel" type="Label" parent="VBoxContainer" unique_id=1119235671]
 layout_mode = 2
 theme = ExtResource("2_a1uob")
-text = "NULL!"
+text = "Direction: NULL!"
+
+[node name="RealsLabel" type="Label" parent="VBoxContainer" unique_id=259006030]
+layout_mode = 2
+theme = ExtResource("2_a1uob")
+text = "Real: NULL!"

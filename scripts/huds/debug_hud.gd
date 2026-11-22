@@ -1,14 +1,14 @@
 # Mostly written by ChatGPT
 extends CanvasLayer
 
-@onready var playerspeed = $VBoxContainer/SpeedLabel
 @onready var playerdir = $VBoxContainer/DirectionLabel
-@onready var player = $"../PlayerNode"
+@onready var playerreal = $VBoxContainer/RealsLabel
+@onready var player = $"../"
 
 func _process(_delta: float) -> void:
 	if player:
-		playerspeed.text = "Speed: " + str(round(player.get_speed()))
-		playerdir.text = "Direction: " + str(round(player.get_direction()))
+		playerdir.text = "Direction: " + str(round(player.GetDirection()))
+		playerreal.text = "Real: " + str(round(player.GetReal()))
 
 func _ready() -> void:
 	print_debug("Debug HUD Ready")

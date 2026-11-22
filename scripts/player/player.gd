@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 func _ready() -> void:
+	max_slides = 16
+	self.wall_min_slide_angle = 0.0
 	print_debug("Player Ready")
 
 func _process(_delta: float) -> void:
@@ -9,6 +11,7 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	_handleMovement(delta)
 	_handleWallCollisions(delta)
+	_handleThruster(delta)
 	_handleCamera(delta)
 	move_and_slide()
 
@@ -40,25 +43,43 @@ func _handleMovement(delta: float) -> void:
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, Globals.Player["Drag"] * delta)	
 
-var _was_colliding := false
-var _wall_target := Vector2.ZERO
-
 func _handleWallCollisions(delta: float) -> void:
-	var _is_colliding := get_slide_collision_count() > 0
-	
-	if _is_colliding:
-		if not _was_colliding:
-			_wall_target = velocity * Globals.Player["WallResistance"]
-			
-		velocity = velocity.move_toward(_wall_target, Globals.Player["Friction"] * delta)
-	
-	_was_colliding = _is_colliding
+	pass
+	# TODO: Add knockback
 
-func get_speed() -> float:
+func GetSpeed() -> float:
 	return velocity.length()
 
-func get_direction() -> float:
+func GetReal() -> float:
+	return get_real_velocity().length()
+
+func GetDirection() -> float:
 	return rotation
 
-func _thrusterInRange(body: Node2D) -> void:
-	velocity += velocity.normalized() * Globals.Player["BaseWallBooster"]
+@onready var _rayLeft: RayCast2D = $RayCastLeft
+@onready var _rayCentre: RayCast2D = $RayCastCentre
+@onready var _rayRight: RayCast2D = $RayCastRight
+@onready var _animations: AnimatedSprite2D = $Animation
+
+func _handleThruster(delta: float) -> void:
+	var normal := Vector2.ZERO
+	for ray in [_rayLeft, _rayCentre, _rayRight]:
+		if ray.is_colliding():
+			normal += ray.get_collision_normal()
+
+	var boosting := normal.length() > 0.001
+	if boosting:
+		normal = normal.normalized()
+
+		var into := velocity.dot(normal)
+		if into < 0.0:
+			velocity -= normal * into
+
+		var along := velocity.slide(normal)
+		if along.length() > 0.001:
+			velocity += along.normalized() * Globals.Player["BaseWallBooster"] * delta
+
+	var wanted := "boosting" if boosting else "default"
+	if _animations.animation != wanted:
+		_animations.play(wanted)
+			
