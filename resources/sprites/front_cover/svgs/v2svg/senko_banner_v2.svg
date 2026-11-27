@@ -8,7 +8,7 @@
    id="svg3"
    sodipodi:docname="senko_banner_v2.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
-   inkscape:export-filename="../senko_banner_v2.png"
+   inkscape:export-filename="../../v2/senko_banner_v2.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -89,11 +89,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="false"
      inkscape:deskcolor="#dfdfdf"
-     inkscape:zoom="0.26757813"
-     inkscape:cx="1642.5109"
-     inkscape:cy="437.25547"
-     inkscape:window-width="1283"
-     inkscape:window-height="735"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="1581.0908"
+     inkscape:cy="837.21442"
+     inkscape:window-width="1366"
+     inkscape:window-height="767"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -141,12 +141,12 @@
      xml:space="preserve"
      id="text1-4"
      style="font-size:200px;line-height:0;font-family:'Adwaita Mono';-inkscape-font-specification:'Adwaita Mono, Normal';writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-7);display:inline;fill:url(#linearGradient5);fill-opacity:1;fill-rule:evenodd;stroke:#2363f2;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.847751"
-     transform="translate(-942.0377,405.0483)"><tspan
+     transform="translate(-942.0377,407.34829)"><tspan
        x="956.73047"
        y="328.00473"
-       id="tspan2"><tspan
+       id="tspan6"><tspan
          style="font-size:600px;font-family:Nasalization;-inkscape-font-specification:'Nasalization, Normal'"
-         id="tspan1">SENKO</tspan></tspan></text>
+         id="tspan5">SENKO</tspan></tspan></text>
   <g
      id="g5">
     <text
@@ -156,8 +156,8 @@
        transform="translate(-881.98538,407.35766)"><tspan
          x="956.73047"
          y="328.00473"
-         id="tspan4"><tspan
+         id="tspan8"><tspan
            style="font-size:600px;font-family:Nasalization;-inkscape-font-specification:'Nasalization, Normal'"
-           id="tspan3">SENKO</tspan></tspan></text>
+           id="tspan7">SENKO</tspan></tspan></text>
   </g>
 </svg>

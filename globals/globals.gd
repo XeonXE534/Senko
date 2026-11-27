@@ -6,8 +6,7 @@ var Player = {
 	"Drag": 570.0,
 	"ReverseAcceleration": 1500.0,  #How fast the acceleration is when moving in the opposite direction
 	"RotationSpeed": 6.0,  # How fast the player rotates
-	"WallResistance" : 0.8, 
-	"Friction" : 300.0,
+	"Grip" : 0.5, # 0-20. beyond 20 shits like a train
 }
 
 func _ready() -> void:

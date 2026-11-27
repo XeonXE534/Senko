@@ -44,12 +44,14 @@ func _rebuild_inner() -> void:
 	_last_points = points
 	if inner_line == null:
 		return
+		
 	inner_line.width = width
 	inner_line.default_color = default_color
 	inner_line.texture = texture
 	inner_line.texture_mode = texture_mode
 	inner_line.points = _offset_line(points, -track_width)
-
+	inner_line.material = material
+	
 func _offset_line(pts: PackedVector2Array, dist: float) -> PackedVector2Array:
 	var out := PackedVector2Array()
 	var n := pts.size()

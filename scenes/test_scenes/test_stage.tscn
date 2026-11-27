@@ -32,5 +32,5 @@ shape = SubResource("RectangleShape2D_6436y")
 position = Vector2(-1378, -607)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1229341825]
-position = Vector2(1503, 1159)
+position = Vector2(1455, 1152)
 shape = SubResource("RectangleShape2D_6436y")
